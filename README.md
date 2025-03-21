@@ -3,6 +3,7 @@
 ## 1. Introdução
 Este relatório descreve o funcionamento do circuito do processador didático fornecido e detalha a implementação das nove novas instruções especificadas no documento. O processador segue a arquitetura MIPS simplificada e suporta instruções nos formatos R, I e J.
 
+
 ## 2. Estrutura Geral do Circuito
 O circuito é composto por:
 - *Banco de Registradores (BR)*: Responsável por armazenar valores temporários.
@@ -10,6 +11,7 @@ O circuito é composto por:
 - *Unidade Lógica e Aritmética (ULA)*: Executa operações matemáticas e lógicas.
 - *Program Counter (PC)*: Controla a execução sequencial das instruções.
 - *Unidade de Controle*: Decodifica instruções e gera sinais de controle.
+
 
 ## 3. Instruções Implementadas
 Foram adicionadas as seguintes instruções ao processador:
@@ -50,11 +52,6 @@ Foram adicionadas as seguintes instruções ao processador:
 - Operador: BR[rt] = BR[rs] >> shamt
 - Implementação: Modifica a ULA para suportar deslocamento para a direita.
 
-## 4. Modificações no Datapath
-Para suportar as novas instruções, foram feitas as seguintes modificações:
-- *Adicionadas novas operações na ULA* para suportar comparação e deslocamentos.
-- *Modificado o MUX do PC* para incluir entrada de JR e JAL.
-- *Expansão da unidade de controle* para gerar sinais apropriados para as novas instruções.
 
-## 5. Conclusão
+## 4. Conclusão
 A implementação das novas instruções expandiu a funcionalidade do processador, permitindo novas operações lógicas, saltos condicionais e manipulação do PC. O circuito atualizado agora pode executar um conjunto mais abrangente de códigos, aproximando-se de uma arquitetura MIPS mais funcional.
